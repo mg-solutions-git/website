@@ -383,6 +383,16 @@ p {
   box-shadow: 0 18px 40px rgba(8, 7, 10, 0.5);
 }
 
+/* Invisible bridge over the gap so hover holds while reaching the panel */
+.nav-menu-panel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  height: 8px;
+}
+
 .nav-app {
   display: flex;
   align-items: center;
