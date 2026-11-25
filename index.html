@@ -9,31 +9,47 @@
 <meta property="og:title" content="MGs Solutions">
 <meta property="og:description" content="Conception et développement d'applications mobiles et web.">
 <meta property="og:type" content="website">
-<!-- <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"> à rétablir avec le logo MGs -->
-<link rel="stylesheet" href="assets/style.css">
+<meta name="theme-color" content="#121116">
+<!-- <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"> restore once the MGs logo is ready -->
+<link rel="preload" href="/assets/fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<script src="/assets/site.js" defer></script>
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
+
+<a class="skip" href="#content">Aller au contenu</a>
 
 <header class="site-head">
   <div class="wrap">
     <a class="brand" href="/">
-      <!-- Logo MGs Solutions : ajouter ici le <svg> ou <img> une fois prêt. -->
+      <!-- MGs Solutions logo: add the <svg> or <img> here once ready. -->
       MGs Solutions
     </a>
     <nav class="site-nav" aria-label="Navigation principale">
       <a href="/" aria-current="page">Accueil</a>
-      <a href="pages/rise.html">Rise</a>
+      <details class="nav-menu">
+        <summary>Applications <svg class="icon nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <div class="nav-menu-panel">
+          <a class="nav-app" data-app="rise" href="/applications/rise/">
+            <img src="/assets/apps/rise/logo.svg" alt="" width="32" height="32">
+            <span class="nav-app-text">
+              <span class="nav-app-name">Rise</span>
+              <span class="nav-app-meta">Application mobile</span>
+            </span>
+          </a>
+        </div>
+      </details>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="content">
 
-  <div class="hero">
+  <div class="hero hero-home">
     <div class="wrap">
-      <p class="eyebrow">Développeur web et mobile freelance</p>
-      <h1>Du prototype<br>à la mise en production.</h1>
+      <p class="eyebrow">Développeur web et mobile</p>
+      <h1 class="title-reveal"><span class="line"><span>Du prototype</span></span> <span class="line"><span>à la mise en production.</span></span></h1>
       <p class="lead">Je conçois et développe des applications web et mobiles, et je les livre opérationnelles : analyse, conception, développement, tests et déploiement. Un seul interlocuteur sur tout le cycle du projet.</p>
       <ul class="tags">
         <li>Flutter</li>
@@ -47,16 +63,21 @@
       </ul>
       <div class="hero-actions">
         <a class="btn" href="#contact">Me contacter</a>
-        <a class="btn btn-ghost" href="pages/rise.html">Voir Rise</a>
+        <a class="btn-link" href="/applications/rise/">Voir Rise
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </div>
 
-  <section id="savoir-faire">
-    <div class="wrap">
-      <h2>Ce que je fais</h2>
-      <p class="muted">Du besoin métier jusqu'au déploiement, en restant joignable à chaque étape.</p>
-      <div class="grid">
+  <section id="services">
+    <div class="wrap split split-sticky">
+      <header class="section-head">
+        <p class="eyebrow"><span class="index">01</span>Savoir-faire</p>
+        <h2>Ce que je fais</h2>
+        <p class="muted">Du besoin métier jusqu'au déploiement, en restant joignable à chaque étape.</p>
+      </header>
+      <div class="services split-body">
         <article class="card">
           <h3>Applications mobiles</h3>
           <p>Flutter et React Native : une base de code pour iOS et Android, jusqu'au dépôt sur l'App Store et Google Play.</p>
@@ -82,46 +103,53 @@
           <p>Cadrage, maquettes et ergonomie avant la première ligne de code, pour construire ce qui sert vraiment.</p>
         </article>
       </div>
+    </div>
   </section>
 
-  <section id="rise">
-    <div class="wrap">
-      <div class="project">
-        <div>
-          <p class="eyebrow">Application</p>
-          <h2>Rise</h2>
-          <p class="muted">Une application de calcul des cycles de sommeil : vous indiquez l'heure à laquelle vous devez vous lever, Rise vous donne les heures de coucher qui vous feront ouvrir les yeux en fin de cycle, pas en plein sommeil profond.</p>
-          <ul class="tags">
-            <li>Flutter</li>
-            <li>iOS</li>
-            <li>Android</li>
-            <li>Conception</li>
-          </ul>
-          <div class="hero-actions">
-            <a class="btn btn-ghost" href="pages/rise.html">Découvrir Rise</a>
-          </div>
-        </div>
-        <div class="project-visual">
-          <div class="ring-plate">
-            <svg width="190" height="190" viewBox="0 0 120 120" aria-hidden="true">
-              <circle cx="60" cy="60" r="44" fill="none" stroke="#39415C" stroke-width="13" stroke-dasharray="20 256" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-              <circle cx="60" cy="60" r="44" fill="none" stroke="#5A6488" stroke-width="13" stroke-dasharray="124 152" stroke-dashoffset="-26" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-              <circle cx="60" cy="60" r="44" fill="none" stroke="#8A93B8" stroke-width="13" stroke-dasharray="60 216" stroke-dashoffset="-156" stroke-linecap="round" transform="rotate(-90 60 60)"/>
-              <circle cx="60" cy="60" r="44" fill="none" stroke="#C4CADE" stroke-width="13" stroke-dasharray="68 208" stroke-dashoffset="-222" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+  <section id="applications">
+    <div class="wrap split split-sticky">
+      <header class="section-head">
+        <p class="eyebrow"><span class="index">02</span>Réalisations</p>
+        <h2>Applications</h2>
+      </header>
+      <div class="apps split-body">
+        <article class="app-card spotlight" id="rise">
+          <div class="showcase" data-app="rise">
+            <svg class="showcase-ticks" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="57" pathLength="240" stroke-dasharray="0.5 9.5" stroke-dashoffset="0.25" transform="rotate(-90 60 60)"/>
+              <circle class="major" cx="60" cy="60" r="57" pathLength="240" stroke-dasharray="0.7 59.3" stroke-dashoffset="0.35" transform="rotate(-90 60 60)"/>
             </svg>
+            <img class="showcase-logo" src="/assets/apps/rise/logo.svg" alt="Logo de l'application Rise" width="120" height="120">
           </div>
-        </div>
+          <div class="app-card-body">
+            <p class="app-meta">Application mobile</p>
+            <h3>Rise</h3>
+            <p>Une application de calcul des cycles de sommeil : vous indiquez l'heure à laquelle vous devez vous lever, Rise vous donne les heures de coucher qui vous feront ouvrir les yeux en fin de cycle, pas en plein sommeil profond.</p>
+            <ul class="tags">
+              <li>Flutter</li>
+              <li>iOS</li>
+              <li>Android</li>
+              <li>Conception</li>
+            </ul>
+            <a class="btn btn-ghost card-link" href="/applications/rise/">En savoir plus<span class="sr-only"> sur Rise</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="cta">
     <div class="wrap">
+      <p class="eyebrow"><span class="index">03</span>Contact</p>
       <h2>Travaillons ensemble</h2>
       <p class="muted">Un projet d'application, une reprise de code existant, ou simplement une question : écrivez-moi. Je réponds vite, et je travaille à distance depuis Paris.</p>
       <div class="hero-actions">
         <a class="btn" href="mailto:contact@mgs-solutions.fr">contact@mgs-solutions.fr</a>
-        <a class="btn btn-ghost" href="https://www.malt.fr/profile/stevenmahendear" target="_blank" rel="noopener">Profil Malt</a>
+        <a class="btn btn-ghost" href="https://www.malt.fr/profile/stevenmahendear" target="_blank" rel="noopener">Profil Malt
+          <svg class="icon icon-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -131,8 +159,8 @@
 <footer class="site-foot">
   <div class="wrap">
     <a href="/">MGs Solutions</a>
-    <a href="pages/privacy.html">Confidentialité</a>
-    <a href="pages/legal.html">Mentions légales</a>
+    <a href="/privacy/">Confidentialité</a>
+    <a href="/legal/">Mentions légales</a>
     <span class="spacer">&copy; 2026</span>
   </div>
 </footer>

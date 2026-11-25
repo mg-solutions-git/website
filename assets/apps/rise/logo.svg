@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Rise app logo: original colors, do not adapt to the site palette. -->
+  <circle cx="60" cy="60" r="44" fill="none" stroke="#39415C" stroke-width="13" stroke-dasharray="20 256" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+  <circle cx="60" cy="60" r="44" fill="none" stroke="#5A6488" stroke-width="13" stroke-dasharray="124 152" stroke-dashoffset="-26" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+  <circle cx="60" cy="60" r="44" fill="none" stroke="#8A93B8" stroke-width="13" stroke-dasharray="60 216" stroke-dashoffset="-156" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+  <circle cx="60" cy="60" r="44" fill="none" stroke="#C4CADE" stroke-width="13" stroke-dasharray="68 208" stroke-dashoffset="-222" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+</svg>

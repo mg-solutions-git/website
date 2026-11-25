@@ -1,2 +1,5 @@
 .DS_Store
 README-intern.md
+CLAUDE.md
+.claude/
+exports/
